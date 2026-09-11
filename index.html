@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -155,7 +157,7 @@ footer{background:var(--navy);color:var(--navy-ink);padding:64px 0 32px}
         <li><a href="#results">合格実績</a></li>
         <li><a href="/ryokin/">料金</a></li>
         <li><a href="/about/">私たちについて</a></li>
-        <li><a data-wix="/blank">ブログ</a></li>
+        <li><a href="/news/">お知らせ</a></li>
         <li><a href="/contact/">お問い合わせ</a></li>
       </ul>
     </nav>
@@ -286,10 +288,11 @@ footer{background:var(--navy);color:var(--navy-ink);padding:64px 0 32px}
   <div class="wrap">
     <h2 class="sec-h center">お知らせ</h2>
     <ul class="news">
-      <li><time>2026年7月20日</time><a data-wix="/news/新高１集団３・４月無料！">８月１ヶ月限定入塾受付開始</a></li>
-      <li><time>2026年7月20日</time><a data-wix="/news/5-most-promising-fintech-startups">紹介制度の更新</a></li>
-      <li><time>2026年4月14日</time><a data-wix="/news/gadget-review:-release-of-new-airy-pods">高一４月から入塾した生徒の現在（高二４月）</a></li>
+      {% for post in site.posts limit:3 %}
+      <li><time>{{ post.date | date: "%Y年%-m月%-d日" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
     </ul>
+    <p style="text-align:center;margin-top:24px"><a href="/news/" style="color:var(--navy)">お知らせ一覧へ</a></p>
   </div>
 </section>
 
