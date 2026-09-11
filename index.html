@@ -70,6 +70,10 @@ section.alt{background:var(--bg2)}
 .flash p{margin:0 0 1em}
 .flash p:last-child{margin:0}
 
+/* コース一覧 */
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.courses a{display:block;border:1px solid var(--line);padding:16px 18px;text-decoration:none;font-weight:500;text-align:center}
+.courses a:hover{border-color:var(--navy)}
 /* 募集対象 */
 .target{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:28px}
 .target div{border-top:3px solid var(--navy);padding-top:18px}
@@ -123,6 +127,7 @@ footer{background:var(--navy);color:var(--navy-ink);padding:64px 0 32px}
   .nav-drop > a::after{content:""}
   .hero{padding:64px 0 56px}
   .hero .wrap,.target,.results,.ft{grid-template-columns:1fr}
+  .courses{grid-template-columns:1fr 1fr}
   .hero h1{font-size:1.85rem}
   section{padding:56px 0}
   .gallery,.scene{grid-template-columns:repeat(2,1fr)}
@@ -143,8 +148,8 @@ footer{background:var(--navy);color:var(--navy-ink);padding:64px 0 32px}
       <ul>
         <li class="nav-drop"><a href="#">コース</a>
           <ul>
-            <li><a data-wix="/複製-高校生">既卒生</a></li><li><a data-wix="/services-2">高３</a></li><li><a data-wix="/複製-高">高２</a></li><li><a data-wix="/複製-高校生-1">高１</a></li>
-            <li><a data-wix="/複製-既卒生">公立中学生</a></li><li><a data-wix="/複製-公立中学生">私立中学生</a></li>
+            <li><a href="/kisotsu/">既卒生</a></li><li><a href="/kou3/">高３</a></li><li><a href="/kou2/">高２</a></li><li><a href="/kou1/">高１</a></li>
+            <li><a href="/chugaku-koritsu/">公立中学生</a></li><li><a href="/chugaku-shiritsu/">私立中学生</a></li>
           </ul>
         </li>
         <li><a href="#results">合格実績</a></li>
@@ -171,7 +176,7 @@ footer{background:var(--navy);color:var(--navy-ink);padding:64px 0 32px}
   </div>
 </div>
 
-<section>
+<section id="courses">
   <div class="wrap">
     <h2 class="sec-h center">募集対象</h2>
     <div class="target">
@@ -179,6 +184,7 @@ footer{background:var(--navy);color:var(--navy-ink);padding:64px 0 32px}
       <div><h3>中学生</h3><p>公立トップ高校に絶対に合格したい人</p></div>
     </div>
     <p class="target-note">今の成績は関係ありません。が、相当量勉強する覚悟は必要です。</p>
+    <div class="courses" style="margin-top:36px"><a href="/kisotsu/">既卒生</a><a href="/kou3/">高校３年生</a><a href="/kou2/">高校２年生</a><a href="/kou1/">高校１年生</a><a href="/chugaku-koritsu/">公立中学生</a><a href="/chugaku-shiritsu/">私立中学生</a></div>
   </div>
 </section>
 
