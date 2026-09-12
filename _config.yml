@@ -3,5 +3,5 @@ description: 九大・国公立大合格へ最短ルートで導く 大学受験
 url: https://www.homeforstudyandvictory.com
 timezone: Asia/Tokyo
 markdown: kramdown
-permalink: /news/:year/:month/:day/:title/
+permalink: /:categories/:year/:month/:day/:title/
 exclude: [README.md]

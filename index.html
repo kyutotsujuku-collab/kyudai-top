@@ -158,6 +158,7 @@ footer{background:var(--navy);color:var(--navy-ink);padding:64px 0 32px}
         <li><a href="/ryokin/">料金</a></li>
         <li><a href="/about/">私たちについて</a></li>
         <li><a href="/news/">お知らせ</a></li>
+      <li><a href="/blog/">ブログ</a></li>
         <li><a href="/contact/">お問い合わせ</a></li>
       </ul>
     </nav>
@@ -288,11 +289,11 @@ footer{background:var(--navy);color:var(--navy-ink);padding:64px 0 32px}
   <div class="wrap">
     <h2 class="sec-h center">お知らせ</h2>
     <ul class="news">
-      {% for post in site.posts limit:3 %}
+      {% for post in site.categories.news limit:3 %}
       <li><time>{{ post.date | date: "%Y年%-m月%-d日" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
-    <p style="text-align:center;margin-top:24px"><a href="/news/" style="color:var(--navy)">お知らせ一覧へ</a></p>
+    <p style="text-align:center;margin-top:24px"><a href="/news/" style="color:var(--navy)">お知らせ一覧へ</a>　<a href="/blog/" style="color:var(--navy)">ブログを読む</a></p>
   </div>
 </section>
 

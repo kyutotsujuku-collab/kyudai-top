@@ -8,6 +8,7 @@
 ---
 title: "ここにタイトル"
 layout: post
+category: news   ← ブログ記事なら blog
 ---
 本文。空行で段落。
 ```

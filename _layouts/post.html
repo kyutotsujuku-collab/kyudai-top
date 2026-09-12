@@ -8,8 +8,8 @@ layout: default
 <section><div class="wrap narrow post-body">
 {{ content }}
 <div class="post-nav">
-  <span>{% if page.previous %}<a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>{% endif %}</span>
-  <span>{% if page.next %}<a href="{{ page.next.url }}">{{ page.next.title }} →</a>{% endif %}</span>
+  <span>{% if page.previous and page.previous.category == page.category %}<a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>{% endif %}</span>
+  <span>{% if page.next and page.next.category == page.category %}<a href="{{ page.next.url }}">{{ page.next.title }} →</a>{% endif %}</span>
 </div>
-<p style="margin-top:32px"><a href="/news/" style="color:var(--navy)">お知らせ一覧へ</a></p>
+<p style="margin-top:32px"><a href="/{{ page.category }}/" style="color:var(--navy)">{% if page.category == "blog" %}ブログ一覧へ{% else %}お知らせ一覧へ{% endif %}</a></p>
 </div></section>

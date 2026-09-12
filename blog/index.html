@@ -1,0 +1,12 @@
+---
+layout: default
+title: ブログ
+---
+<div class="post-hero"><div class="wrap"><p class="kicker" style="font-size:.85rem;letter-spacing:.14em;opacity:.8;margin-bottom:10px">BLOG</p><h1>ブログ</h1><p style="margin-top:12px;opacity:.85">代表が受験・学習について書いています。</p></div></div>
+<section><div class="wrap">
+<ul class="news-list">
+{% for post in site.categories.blog %}
+<li><time>{{ post.date | date: "%Y年%-m月%-d日" }}</time><a href="{{ post.url }}">{{ post.title }}<span class="ex">{{ post.excerpt | strip_html | truncate: 70 }}</span></a></li>
+{% endfor %}
+</ul>
+</div></section>
