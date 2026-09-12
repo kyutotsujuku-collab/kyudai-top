@@ -137,6 +137,22 @@ footer{background:var(--navy);color:var(--navy-ink);padding:64px 0 32px}
   .news li{grid-template-columns:1fr;gap:2px}
 }
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+/* ---- motion ---- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms),transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0ms)}
+.reveal.in{opacity:1;transform:none}
+.hero h1,.hero .lead,.hero .cta,.hero .record{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .lead{animation-delay:.15s}.hero .cta{animation-delay:.3s}.hero .record{animation-delay:.45s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+nav a{position:relative}
+nav > ul > li > a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--seal);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+nav > ul > li > a:hover::after,nav > ul > li > a:focus-visible::after{transform:scaleX(1)}
+.target > div,.courses a,.plans .plan,.ways .way,.scene figure img,.gallery figure img,.page-hero img{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.target > div:hover,.courses a:hover,.plans .plan:hover,.ways .way:hover{transform:translateY(-4px);box-shadow:0 14px 30px -18px rgba(20,32,56,.35)}
+.scene figure:hover img,.gallery figure:hover img{transform:translateY(-4px);box-shadow:0 18px 36px -20px rgba(20,32,56,.45)}
+.cta,.btn{transition:transform .25s ease,filter .25s ease,box-shadow .25s ease}
+.cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(183,40,46,.6)}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero h1,.hero .lead,.hero .cta,.hero .record{animation:none}}
+
 :focus-visible{outline:2px solid var(--seal);outline-offset:3px}
 </style>
 </head>
@@ -315,5 +331,6 @@ footer{background:var(--navy);color:var(--navy-ink);padding:64px 0 32px}
   <p class="copy">© 2019 九大突破塾</p>
 </footer>
 
+<script src="/assets/motion.js" defer></script>
 </body>
 </html>
