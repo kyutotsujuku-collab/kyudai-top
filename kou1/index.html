@@ -13,6 +13,13 @@
 .hero-fig figcaption{font-size:.85rem;opacity:.85;margin-top:8px;text-align:center}
 .page-hero .wrap{align-items:start}
 </style>
+<style>
+.zoom{display:block;cursor:zoom-in}
+.lb{position:fixed;inset:0;background:rgba(10,16,28,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:24px;cursor:zoom-out}
+.lb.open{display:flex}.lb img{max-width:100%;max-height:100%;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lb button{position:absolute;top:16px;right:16px;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;font-size:1rem;padding:8px 14px;border-radius:2px;cursor:pointer}
+.body figure{margin:2em 0}.body figure img{width:100%;border:1px solid var(--line)}.body figcaption{font-size:.85rem;color:var(--ink2);margin-top:8px}
+</style>
 </head>
 <body>
 <header>
@@ -37,12 +44,13 @@
       <h1>高校１年生</h1>
       <p class="sub" style="font-size:1rem;line-height:1.9">数学・英語を最も成績の取れるやり方でどんどん先に進めていきます。数学は４ヶ月で高１内容、８ヶ月で高２内容、１２ヶ月で理系内容を終わらせ、終わったものから演習。英語は７ヶ月半で英文法、その後長文と英作文と単語の強化へと移ります。同時に国語・理科・社会・情報も適切に指導・管理していきます。</p>
     </div>
-    <figure class="hero-fig"><img src="/assets/moshi-2026-07.jpg" alt="高2 7月 ベネッセ総合学力テスト 個人成績表"><figcaption>高１・４月から入った生徒の高２夏までの成績</figcaption></figure>
+    <figure class="hero-fig"><a href="/assets/moshi-2026-07.jpg" class="zoom" aria-label="成績表を拡大"><img src="/assets/moshi-2026-07.jpg" alt="高2 7月 ベネッセ総合学力テスト 個人成績表"></a><figcaption>高１・４月から入った生徒の高２夏までの成績（クリックで拡大）</figcaption></figure>
   </div>
 </div>
 <section>
   <div class="wrap narrow body">
 <p>当塾は、大きな集団指導塾で大学受験生を多く見てきた代表が、集団指導・個別指導・映像授業・IoTによる24時間質問対応体制とあらゆる物を取り入れ、実際に大きく成果を上げている個人塾です。</p>
+<figure><img src="/assets/board.jpg" alt="ホワイトボードで数学の問題を解く生徒" loading="lazy"><figcaption>解答は自分の手で書き切るまで。</figcaption></figure>
 <p>授業では、一回でかなり進みます。もちろん普段から準備の量は相当なものになります。しかし、それが将来の財産になります。高校の勉強は日々の積み重ねの有無でとんでもない差がつきます。</p>
 <p>その差はたとえどんなに勉強の才能があろうとも、越えられない量的な壁となります。</p>
 <p>受験準備は高３の部活終わってからでいいですか？そうお考えの方はどうぞ。こちらでは高１から当塾の門を叩いてくれた方を、とんでもなく鍛えていきます。</p>
@@ -77,5 +85,12 @@
   <p class="copy">© 2019 九大突破塾</p>
 </footer>
 <script src="/assets/motion.js" defer></script>
+<div class="lb" id="lb"><button type="button" aria-label="閉じる">閉じる ×</button><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img');
+document.querySelectorAll('a.zoom').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();im.src=a.href;lb.classList.add('open');document.body.style.overflow='hidden';});});
+function close(){lb.classList.remove('open');document.body.style.overflow='';}
+lb.addEventListener('click',close);document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});})();
+</script>
 </body>
 </html>
