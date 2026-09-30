@@ -3,7 +3,7 @@ title: "（修猷館高校）数学定期テスト得点約２倍"
 layout: post
 category: blog
 ---
-![](https://static.wixstatic.com/media/f01551_2a8323e6a2c04132947e4dfc2900d055~mv2.jpeg/v1/fill/w_960,h_1280,al_c,q_85/f01551_2a8323e6a2c04132947e4dfc2900d055~mv2.jpeg)
+![](/assets/blog/shuyukan-sugaku-2bai.jpeg)
 
 福岡のみならず、西日本屈指の公立高校、修猷館高校の生徒です。数学を指導しています。
 

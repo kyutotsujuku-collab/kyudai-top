@@ -3,7 +3,7 @@ title: "早稲田大学 合格（推薦）"
 layout: post
 category: blog
 ---
-![](https://static.wixstatic.com/media/f01551_004bad09f10a48ff8fd61d22ae812a5d~mv2.png/v1/fill/w_750,h_1055,al_c,q_90/f01551_004bad09f10a48ff8fd61d22ae812a5d~mv2.png)
+![](/assets/blog/waseda-suisen.png)
 
 昨年中には連絡が来ていましたが、当塾から早稲田大学の推薦合格者が出ました。
 

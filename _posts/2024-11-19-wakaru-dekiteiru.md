@@ -3,7 +3,7 @@ title: "「わかる」ではなく「できている」まで確認します"
 layout: post
 category: blog
 ---
-![](https://static.wixstatic.com/media/f01551_106149f73aa84f488fe7c62d3a94d0b4~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85/f01551_106149f73aa84f488fe7c62d3a94d0b4~mv2.jpg)
+![](/assets/blog/wakaru-dekiteiru.jpg)
 
 「わかる」は当然です。むずかしくなるほどそれも大変にはなりますが、本当に点数に出るには、「できている」ことまで確認することが大切です。
 

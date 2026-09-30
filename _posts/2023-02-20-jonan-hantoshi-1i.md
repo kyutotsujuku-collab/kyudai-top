@@ -3,7 +3,7 @@ title: "（城南高校）半年でクラス１位。導きに乗ってくれさ
 layout: post
 category: blog
 ---
-![](https://static.wixstatic.com/media/f01551_0579362df64a4eec98a248a930898d8b~mv2.png/v1/fill/w_980,h_735,al_c,q_90/f01551_0579362df64a4eec98a248a930898d8b~mv2.png)
+![](/assets/blog/jonan-hantoshi-1i.png)
 
 ２学期中間後（９月中旬）に入っていただいた城南高校１年生。２学期期末は時間が足りず思うようにいきませんでしたが、その後頑張って今回の学年末で数学クラス１位を獲得しました。
 

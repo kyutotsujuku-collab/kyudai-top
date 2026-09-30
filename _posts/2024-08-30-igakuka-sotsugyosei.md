@@ -3,7 +3,7 @@ title: "医学科合格の卒業生が来てくれました"
 layout: post
 category: blog
 ---
-![](https://static.wixstatic.com/media/f01551_f621ac76e2b2482ca2babcbb909c9460~mv2.png/v1/fill/w_980,h_555,al_c,q_90/f01551_f621ac76e2b2482ca2babcbb909c9460~mv2.png)
+![](/assets/blog/igakuka-sotsugyosei.png)
 
 佐賀大学医学科に合格した卒業生が訪塾してくれました。
 
