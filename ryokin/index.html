@@ -18,6 +18,13 @@
 .plan .desc{margin-top:12px;font-size:.92rem;color:var(--ink2)}
 .plan.featured{border:2px solid var(--seal)}
 .note-center{text-align:center;color:var(--ink2);font-size:.95rem;margin-top:36px}
+.terms-h{font-size:1.4rem;margin-bottom:12px}
+.terms-lead{color:var(--ink2);margin-bottom:24px}
+.terms{list-style:none;counter-reset:n;margin:0}
+.terms li{counter-increment:n;position:relative;padding:18px 0 18px 52px;border-top:1px solid var(--line);line-height:1.9}
+.terms li:last-child{border-bottom:1px solid var(--line)}
+.terms li::before{content:counter(n);position:absolute;left:0;top:16px;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;display:grid;place-items:center;font-size:.95rem}
+.terms strong{color:var(--ink)}
 @media (max-width:820px){.plans{grid-template-columns:1fr}}
 </style>
 </head>
@@ -27,7 +34,7 @@
     <a class="brand" href="/"><img src="/assets/logo.jpg" alt=""><span>九大突破塾<small>大学受験・トップ高校受験 専門塾</small></span></a>
     <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="メニュー">メニュー</button>
     <nav><ul>
-      <li class="nav-drop"><a href="/#courses">コース</a><ul><li><a href="/kisotsu/">既卒生</a></li><li><a href="/kou3/" aria-current="page">高３</a></li><li><a href="/kou2/">高２</a></li><li><a href="/kou1/">高１</a></li><li><a href="/chugaku-koritsu/">公立中学生</a></li><li><a href="/chugaku-shiritsu/">私立中学生</a></li></ul></li>
+      <li class="nav-drop"><a href="/#courses">コース</a><ul><li><a href="/kisotsu/">既卒生</a></li><li><a href="/kou3/">高３</a></li><li><a href="/kou2/">高２</a></li><li><a href="/kou1/">高１</a></li><li><a href="/chugaku-koritsu/">公立中学生</a></li><li><a href="/chugaku-shiritsu/">私立中学生</a></li></ul></li>
       <li><a href="/#results">合格実績</a></li>
       <li><a href="/ryokin/" aria-current="page">料金</a></li>
       <li><a href="/about/">私たちについて</a></li>
@@ -52,7 +59,17 @@
   </div>
   <p class="note-center">個別指導は代表の空き状況との調整になります。まずはお問い合わせください。</p>
 </div></section>
-<div class="cta-band"><div class="wrap"><h2>まずは面談から</h2><p>入塾する・しないに関わらず、現状の把握とその時点でのアドバイスをします。</p><a class="btn" href="/contact/">お問い合わせページへ</a></div></div>
+<section class="alt"><div class="wrap narrow">
+  <h2 class="terms-h">入塾にあたって</h2>
+  <p class="terms-lead">少人数で代表が一人ひとりを直接見る塾です。お互いに時間を無駄にしないため、以下をご確認の上でお問い合わせください。</p>
+  <ol class="terms">
+    <li><strong>まず面談を行います。</strong>入塾する・しないに関わらず、現状の把握と、その時点でのアドバイスをします。</li>
+    <li><strong>体験授業は集団授業のみ</strong>です。個別指導の体験は行っていません。</li>
+    <li><strong>話し合いで決めた課題は、必ず実行していただきます。</strong>約束を何度も守れない可能性のある方は、入塾をお控えください。約束を守れないまま通い続けても成績は上がりません。</li>
+    <li><strong>一度退塾された方の再入学は、お断りしております。</strong>病気・怪我など、やむを得ない事情があった場合はこの限りではありません。</li>
+  </ol>
+</div></section>
+<div class="cta-band"><div class="wrap"><h2>まずは面談から</h2><p>入塾のお問い合わせはこちらから（体験は集団のみ）。</p><a class="btn" href="/contact/">お問い合わせページへ</a></div></div>
 
 <footer id="contact">
   <div class="wrap ft">
