@@ -1,12 +1,12 @@
-:root{--bg:#FBF7F0;--bg2:#F3EADC;--ink:#2B1F17;--ink2:#6B5748;--line:#E0D3C1;--navy:#4A2A1E;--navy-ink:#FFF8EE;--seal:#C9502A}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1B1512;--bg2:#241C17;--ink:#F1E8DC;--ink2:#BDAA98;--line:#3A2E26;--navy:#2A1710;--navy-ink:#F1E8DC;--seal:#E4683C}}
+:root{--bg:#FFF8EF;--bg2:#FDE4C4;--ink:#241A2E;--ink2:#5E4F6B;--line:#EBD5B8;--navy:#C9611A;--navy-ink:#FFF6EA;--seal:#5B2D86}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17111F;--bg2:#211829;--ink:#F5EBDD;--ink2:#C3B2CF;--line:#372A41;--navy:#9E4A10;--navy-ink:#FFF6EA;--seal:#9B6BC8}}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;font-size:16px;line-height:1.9;letter-spacing:.02em;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}a{color:inherit}
 h1,h2,h3{font-family:"Noto Serif JP","Hiragino Mincho ProN",serif;font-weight:700;line-height:1.4;letter-spacing:.04em}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}.narrow{max-width:680px;margin:0 auto}
 header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
-header::after{content:"";display:block;height:3px;background:linear-gradient(90deg,#C9502A 0 25%,#E39B2D 25% 50%,#8A3B2A 50% 75%,#D7A95F 75% 100%)}
+header::after{content:"";display:block;height:3px;background:linear-gradient(90deg,#E8761B 0 20%,#5B2D86 20% 40%,#F2A33A 40% 60%,#2B1B3D 60% 80%,#E8761B 80% 100%)}
 .hd{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;align-items:center;gap:10px;font-family:"Noto Serif JP",serif;font-weight:700;font-size:1.25rem;text-decoration:none;letter-spacing:.06em}
 .brand img{width:44px;height:44px;border-radius:50%;object-fit:cover}
@@ -58,8 +58,8 @@ nav a{position:relative}
 nav > ul > li > a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--seal);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
 nav > ul > li > a:hover::after,nav > ul > li > a:focus-visible::after{transform:scaleX(1)}
 .target > div,.courses a,.plans .plan,.ways .way,.scene figure img,.gallery figure img,.page-hero img{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
-.target > div:hover,.courses a:hover,.plans .plan:hover,.ways .way:hover{transform:translateY(-4px);box-shadow:0 14px 30px -18px rgba(60,34,22,.35)}
-.scene figure:hover img,.gallery figure:hover img{transform:translateY(-4px);box-shadow:0 18px 36px -20px rgba(60,34,22,.45)}
+.target > div:hover,.courses a:hover,.plans .plan:hover,.ways .way:hover{transform:translateY(-4px);box-shadow:0 14px 30px -18px rgba(43,27,61,.35)}
+.scene figure:hover img,.gallery figure:hover img{transform:translateY(-4px);box-shadow:0 18px 36px -20px rgba(43,27,61,.45)}
 .cta,.btn{transition:transform .25s ease,filter .25s ease,box-shadow .25s ease}
-.cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(201,80,42,.6)}
+.cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(232,118,27,.6)}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero h1,.hero .lead,.hero .cta,.hero .record{animation:none}}
