@@ -15,3 +15,17 @@
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
   els.forEach(function(el){ io.observe(el); });
 })();
+
+// ---- snow (xmas) ----
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.hero,.page-hero').forEach(function(h){
+    var s=document.createElement('div'); s.className='snow';
+    for (var i=0;i<36;i++){ var f=document.createElement('i');
+      var sz=4+Math.random()*7; f.style.width=f.style.height=sz+'px';
+      f.style.left=Math.random()*100+'%'; f.style.opacity=.4+Math.random()*.6;
+      f.style.animationDuration=(7+Math.random()*9)+'s'; f.style.animationDelay=(-Math.random()*16)+'s';
+      f.style.setProperty('--dx',(Math.random()*80-40)+'px'); s.appendChild(f); }
+    h.appendChild(s);
+  });
+})();
