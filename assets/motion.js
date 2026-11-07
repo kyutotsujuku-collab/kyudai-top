@@ -32,8 +32,8 @@
 
 // ---- lightbox (写真をクリック/タップで拡大) ----
 (function(){
-  var imgs=[].slice.call(document.querySelectorAll('main img, section img, article img, .post-body img, .scene img, .gallery img, .results img, .body img')).filter(function(im){
-    if(im.closest('header,footer,.brand,.lb,a')) return false;
+  var imgs=[].slice.call(document.querySelectorAll('img')).filter(function(im){ if(im.closest('nav,.menu-btn,.lbx')||im.width<80) return false;
+    if(im.closest('header,footer,.brand,.lb,.lbx,a')) return false;
     return !im.dataset.nozoom;
   });
   if(!imgs.length) return;
