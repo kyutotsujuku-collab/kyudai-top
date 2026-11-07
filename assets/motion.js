@@ -19,7 +19,7 @@
 // ---- snow (xmas) ----
 (function(){
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  document.querySelectorAll('.hero,.page-hero').forEach(function(h){
+  document.querySelectorAll('.hero,.page-hero,.post-hero').forEach(function(h){
     var s=document.createElement('div'); s.className='snow';
     for (var i=0;i<36;i++){ var f=document.createElement('i');
       var sz=4+Math.random()*7; f.style.width=f.style.height=sz+'px';
