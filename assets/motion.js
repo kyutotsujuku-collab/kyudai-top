@@ -29,3 +29,25 @@
     h.appendChild(s);
   });
 })();
+
+// ---- lightbox (写真をクリック/タップで拡大) ----
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll('main img, section img, article img, .post-body img, .scene img, .gallery img, .results img, .body img')).filter(function(im){
+    if(im.closest('header,footer,.brand,.lb,a')) return false;
+    return !im.dataset.nozoom;
+  });
+  if(!imgs.length) return;
+  var css='.lbx{position:fixed;inset:0;background:rgba(10,16,28,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:24px;cursor:zoom-out}.lbx.open{display:flex}.lbx img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.6)}.lbx button{position:absolute;top:16px;right:16px;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;font-size:1rem;padding:8px 14px;border-radius:2px;cursor:pointer}.lbx figcaption{position:absolute;left:0;right:0;bottom:16px;text-align:center;color:#fff;font-size:.9rem;padding:0 24px}img.zoomable{cursor:zoom-in}';
+  var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+  var lb=document.createElement('div');lb.className='lbx';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');
+  lb.innerHTML='<button type="button" aria-label="閉じる">閉じる ×</button><img alt=""><figcaption></figcaption>';
+  document.body.appendChild(lb);
+  var im=lb.querySelector('img'),cap=lb.querySelector('figcaption');
+  function open(src,alt){im.src=src;im.alt=alt||'';cap.textContent=alt||'';lb.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';im.src='';}
+  imgs.forEach(function(x){x.classList.add('zoomable');x.setAttribute('tabindex','0');
+    x.addEventListener('click',function(){open(x.currentSrc||x.src,x.alt);});
+    x.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(x.currentSrc||x.src,x.alt);}});});
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
